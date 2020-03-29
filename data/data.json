@@ -1,0 +1,7 @@
+
+{"cities":
+[{"_id":1, "name":"Stockholm", "population":1372565},
+  {"_id":2, "name":"Göteborg", "population":549839},
+  {"_id":3, "name":"Malmö", "population":280415},
+  {"_id":4, "name":"Uppsala", "population":140454},
+  {"_id":5, "name":"Västerås", "population":110877}]}

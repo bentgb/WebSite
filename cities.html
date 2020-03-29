@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Travel Diary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="travel">
+    <meta name="description" content="My travel diary: Cities">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/unsemantic-grid-responsive-tablet.css" />
+</head>
+
+<body>
+
+<div class="grid-container">
+    <header class="masthead">
+
+        <a href="index.html">
+            <img class="Logo"  src="img/Logo.jpg" >
+        </a>
+
+    </header>
+    <div class="grid-90 prefix-5 suffix-5 mobile-grid-100 tablet-grid-90 tablet-prefix-5 tablet-suffix-5 menu_content">
+        <nav class="nav_list">
+            <ul class="menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="form.html">Your opinion matters </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <p>
+            Here is the list of 5 Swedish cities that are added to read JSON data with Fetch
+        </p>
+        <ol id="city_list">
+                    </ol>
+        <script>
+
+            function loadCity(){
+                fetch('data/data.json')
+                    .then(response => {
+                        return response.json()
+                    })
+                .then(data => {
+                    let cities = "";
+                    data.cities.forEach(function (city, index) {
+
+                        cities += '<li>'
+                        cities += '<h4>' + "Name:  " + city.name + ' \"' + "population:  " + city.population + '\"</h4>'
+                        cities += '</li>'
+                    })
+                    document.getElementById("city_list").innerHTML = cities;
+            })
+            }
+            loadCity();
+        </script>
+
+    </div>
+</div>
+</body>
+</html>

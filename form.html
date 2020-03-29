@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Next trip!</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="grid-container">
+    <header class="masthead">
+
+        <a href="index.html">
+            <img class="Logo"  src="img/Logo.jpg" >
+        </a>
+
+    </header>
+    <div class="grid-90 prefix-5 suffix-5 mobile-grid-100 tablet-grid-90 tablet-prefix-5 tablet-suffix-5 menu_content">
+        <nav class="nav_list">
+            <ul class="menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="cities.html">Cities</a></li>
+                <li><a href="form.html">Your Opinion Matters</a></li>
+            </ul>
+        </nav>
+    </div>
+<p id="intro"> Where should I visit next? Please fill in the following form!</p>
+<div id="nextTripForm">
+    <p id="output" align="center"></p>
+    <div class="container">
+        <form id="formReg">
+            <p>
+                <label>City: </label>
+                <input required type="text" id="city"/>
+            </p>
+            <p>
+                <label>Country: </label>
+                <input type="text" id="country"/>
+            </p>
+            <p>
+                <label>Why should I visit there: </label>
+                <textarea id="description" rows="4" cols="65" wrap="soft">
+                </textarea>
+            </p>
+
+            <p>
+                <input id="send" type="submit" value="Send"/>
+            </p>
+        </form>
+    </div>
+    <script src="js/form.js"></script>
+</div>
+</div>
+
+</body>
+
+<footer>
+
+    <hr/>
+
+</footer>
+</html>
